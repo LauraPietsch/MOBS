@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number guessing game</h1>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you
+        if your guess was too high or too low.</p>
+
+    <div class="form">
+        <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1; //Math.floor schneidet alle Zahlen ab; Math.randon ist ein Algorhythmus; *100 da es sich um 0,xx Zahlen handelt; +1 da Zahl nicht 0 sein soll
+        console.log("Zufallszahl", randomNumber); //Anzeige der random Number in Console
+
+        const guesses = document.querySelector('.guesses');
+        console.log("Guesses element", guesses); // Anzeige, wo Class Guesses auf Webseite dargestellt wird (mit Maus drüber fahren)
+
+        const lastResult = document.querySelector('.lastResult'); //querySelector durchsucht DOM 1x nach Klasse "last result"
+        const lowOrHi = document.querySelector('.lowOrHi');
+        const guessSubmit = document.querySelector('.guessSubmit');
+        const guessField = document.querySelector('.guessField'); // diese Konstanten / Variablen werden gesetzt, dass diese nicht bei jedem Aufruf im DOM neu gesucht werden müssen
+        let guessCount = 1; //Startwert für Schätzversuche
+        let resetButton;
+
+        function checkGuess() { // Überprüfung, ob geschätzte Zahl eine Zahl ist
+            let userGuess = Number(guessField.value); //userGuess als Variable gesetzt, Variable besteht aus eingegebener Zahl in Eingabefeld - der Variable guessField
+            if (guessCount === 1) {
+                guesses.textContent = 'Previous guesses: '; // angezeigter Text als Reaktion auf Zahlenschätzung
+            }
+
+            guesses.textContent += userGuess + ' '; // Verkettung von geschätzten Zahlen, die angezeigt werden und Leerzeichen
+
+            if (userGuess === randomNumber) {
+                lastResult.textContent = 'Congratulations! You got it right!';
+                lastResult.style.backgroundColor = 'green';
+                lowOrHi.textContent = '';
+                setGameOver();
+            } else if (guessCount === 10) {
+                lastResult.textContent = '!!!GAME OVER!!!';
+                lowOrHi.textContent = '';
+                setGameOver();
+            } else {
+                lastResult.textContent = 'Wrong!';
+                lastResult.style.backgroundColor = 'red';
+                if (userGuess < randomNumber) {
+                    lowOrHi.textContent = 'Last guess was too low!';
+                } else if (userGuess > randomNumber) {
+                    lowOrHi.textContent = 'Last guess was too high!';
+                }
+            }
+
+            guessCount++; //
+            guessField.value = ''; // Wert aus GuessField gelöscht
+            guessField.focus();// Cursor wird in Feld gesetzt; "Fokus auf guessField"
+        }
+
+        guessSubmit.addEventListener('click', checkGuess); // Event wird Button zu geordnet; Callback: bei Click auf "Submit" Button muss Code "checkGuess"-Funktion durchlaufen
+        guessField.addEventListener('keyup', enterPressed); // Entertaste für Eingabe
+        
+        function enterPressed (event){ // zählt Entertastendrücke mit 
+            if(event.keyCode === 13){ // die Entertaste hat den keyCode 13
+            console.log ("Event: ", event); // gibt aus über "event" welche Tasten gedrückt wurden; Zeile eigentlich nicht benötigt
+            checkGuess(); // nach Drücken der Entertaste wird checkGuess() ausgeführt
+        }
+        }
+
+        function setGameOver() {
+            guessField.disabled = true; // keine Eingabe mehr möglich 
+            guessSubmit.disabled = true; // Submit Button nicht mehr anklickbar
+            resetButton = document.createElement('button'); // neuer Button (Element) wird erzeugt
+            resetButton.textContent = 'Start new game'; 
+            document.body.appendChild(resetButton); // Zufügen des Buttons
+            resetButton.addEventListener('click', resetGame); // Event einfügen; Callback für Funktion reset Game
+        }
+
+        function resetGame() {
+            guessCount = 1; // Zähler wieder auf 1
+            const resetParas = document.querySelectorAll('.resultParas p'); // alle Absätze / p-Elemente die sich in resetParas Klasse befinden suchen
+            for (let i = 0; i < resetParas.length; i++) { // let i= 0 ist Initialisierungsanweisung für Schleife; Weiterlaufbedingung - solange i < Bedingung von "resetParas"; am Ende eines Durchlaufs i hochzählen -> i++ entspricht i + 1
+                resetParas[i].textContent = ''; // Inhalt zurücksetzen
+            }
+
+            resetButton.parentNode.removeChild(resetButton); // Reset Button entfernt
+            guessField.disabled = false; // Disabling wieder aufgehoben
+            guessSubmit.disabled = false;
+            guessField.value = ''; // GuessField geleert
+            guessField.focus(); // Cursor wieder in Eingabefeld gesetzt
+            lastResult.style.backgroundColor = 'white'; 
+            randomNumber = Math.floor(Math.random() * 100) + 1; // Program läuft einmal durch, danach muss es wieder angestoßen werden durch "Formel"
+        }
+    </script>
+</body>
+
+</html>
