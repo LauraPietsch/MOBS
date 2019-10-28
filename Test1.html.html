@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+<style> h1 {
+color: darkgreen;
+background-color: grey;
+border: 0.5px solid grey
+}
+
+h1 + p {
+font-size:200%
+}
+</style>
+
+    <title>My test <span> page </span> </title>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  function createParagraph() {
+    let para = document.createElement('p');
+    para.textContent = 'You clicked the button!';
+    document.body.appendChild(para);
+  }
+
+  const buttons = document.querySelectorAll('button');
+
+  for(let i = 0; i < buttons.length ; i++) {
+    buttons[i].addEventListener('click', createParagraph);
+  }
+});
+</script>
+
+  </head>
+
+  <body>
+    <h1 class="special"> My Page </h1>
+    <p><strong>This is my page</strong></p>
+    <p>My favourite page is <a href="https://www.google.com/". title="Google Website"> google </a>.</p>
+    
+<!--Bild als image eingefügt-->
+   <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Logo of the Google company"
+    width="125" height="50"
+    title="The Google Logo">
+
+<!--Bild mit "figure element" eingefügt"-->
+   <figure> 
+   <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Logo of the Google company"
+    width="125" height="50">
+
+   <figcaption> The Google Logo </figcaption>
+   </figure>
+
+   <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p> 
+
+<!--Video embedded-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dh7zGq-JjDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!--Map embedded-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84239.08354261056!2d9.601762452739589!3d48.71558432526392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799a3f27a2bac33%3A0x1a25f1772f67e9c3!2sG%C3%B6ppingen!5e0!3m2!1sde!2sde!4v1570960287326!5m2!1sde!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+
+<iframe src="https://www.hs-esslingen.de/"
+        width="100%" height="500" frameborder="0"
+        allowfullscreen sandbox>
+  <p> <a href="https://www.hs-esslingen.de/">
+    Fallback link for browsers that don't support iframes
+  </a> </p>
+</iframe>
+
+<img 
+    src="equilateral.svg" 
+    alt="triangle with all three sides equal"
+    height="87px"
+    width="100px" />
+
+<svg version="1.1"
+     baseProfile="full"
+     width="300" height="200"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="black" />
+  <circle cx="150" cy="100" r="90" fill="blue" />
+</svg>
+
+
+<p> richtige Darstellung der Klammern im Text: &lt;p&gt; </p>
+
+<ul>
+     <li>Item one</li>
+     <li class="special">Item two</li>
+     <li>Item <em>three</em></li>
+</ul>
+       
+
+    <!-- COMMENT -->
+  </body>
+</html>
