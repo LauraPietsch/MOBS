@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Integer checker</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+        <h1>Integer checker</h1>     
+    
+        <p>Wir prüfen deine Zahl. Gib eine positive ganze Zahl ein und wir sagen dir aus welchen Faktoren sie besteht. 
+            Handelt es sich um eine Primzahl wird dir dies angezeigt.</p>
+
+        <div class="form">
+            <label for="Eingabefeld"> Gib eine Zahl ein: </label> 
+            <input type="text" id="Eingabefeld" class="Eingabefeld">
+            <input type="submit" value="Prüfen" class="Eingabevorschlag">
+        </div>  
+
+        <div class="resultParas">
+                <p class="falscheEingabe"></p>
+                
+        
+        <script> 
+            const falscheEingabe = document.querySelector('.falscheEingabe'); 
+            const Eingabevorschlag = document.querySelector('.Eingabevorschlag')
+            
+
+            function Zahlenprüfung(number) { 
+                
+                let UserEingabe = Number(Eingabefeld.value);
+
+                if (UserEingabe < 0) {
+                    falscheEingabe.textContent = 'Falsche Eingabe! Gib eine positive Zahl ein.';
+                    setGameOver();
+                }
+
+
+                let Teiler =[] // Array definiert
+                for (let i = Math.floor(number/2);i > 1; i--) { // i-- => i "kleiner machen"
+                // Prüfen ob sich number durch i ganzzahlich teilen lässt
+                //wenn ja ist i ein Teiler -> in Array schreiben
+           
+                    if (number%i==0) { // % gibt Rest beim Teilen aus
+                        Teiler.push(i); // Array befüllen mit Teilern
+
+                    }
+                }
+                return Teiler; 
+            }
+
+            let intFactors = Zahlenprüfung();
+
+            console.log("Teiler: ", intFactors);
+
+            Eingabevorschlag.addEventListener('click', Zahlenprüfung);
+
+            function setGameOver() {
+                Eingabefeld.disabled= true;
+                Eingabevorschlag.disabled = true;
+                resetButton = document.createElement('button');
+                resetButton.textContent = "Neustart";
+                document.body.appendChild(resetButton);
+                resetButton.addEventListener('click', resetGame);
+            }
+
+            function resetGame() {
+                const resetParas = document.querySelectorAll('.resultParas p'); // alle Absätze / p-Elemente die sich in resetParas Klasse befinden suchen
+                for(let i = 0; i < resetParas.length ; i++) {
+                    resetParas[i].textContent = ''; // Inhalt zurücksetzen
+                }
+                    
+                resetButton.parentNode.removeChild(resetButton); // Reset Button entfernt
+
+                Eingabefeld.disabled = false;
+                Eingabevorschlag.disabled = false;
+                Eingabefeld.value = '';
+                Eingabefeld.focus();
+            }
+             
+        </script>
+</body>
