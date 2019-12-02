@@ -1,0 +1,81 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+     /*  grid-template-areas: "header header header" "nav main side" "footer footer footer";
+     grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    */
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #9c9a9a;
+    height: 15%;
+    /*padding: 20px;*/
+       
+}
+
+main {
+    grid-area: main;
+    background: #ffffff;
+    padding: 0px;
+    height: 77%;
+    border-width: 5px;
+    display: grid;
+    grid-template-areas: "Div1 Div2 Div4" "Div5 Div6 Div7";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    }
+
+footer {
+    grid-area: footer;
+    background: #9c9a9a;
+    height: 8%;
+    /*padding: 20px;*/
+}
+
+div.button {
+    float: left;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+div.Div1 {
+grid-area:Div1;
+margin: 10px;
+padding: 120px;
+}
+
+div.Div2 {
+grid-area:Div2;
+margin: 10px;
+padding: 120px;
+}
+
+div.Div4 {
+grid-area:Div4;
+margin: 10px;
+padding: 120px;
+}
+
+div.Div5 {
+grid-area:Div5;
+margin: 10px;
+padding: 120px;
+}
+
+div.Div6 {
+grid-area:Div6;
+margin: 10px;
+padding: 120px;
+}
+
+div.Div7 {
+grid-area:Div7;
+margin: 10px;
+padding: 120px;
+}
