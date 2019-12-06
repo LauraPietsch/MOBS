@@ -1,0 +1,140 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background:  #ffffff
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    display: grid;
+    grid-template-areas: "header header header" "nav main side" "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+    text-align:right;
+}
+
+main {
+    grid-area: main;
+    background:  #ffffff;
+    padding: 0px;
+    display:grid;
+    grid-template-areas: "Icon1 Icon2 Icon3 Icon4" "Icon5 Icon6 Icon7 Icon8";
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    }     
+
+
+footer {
+    grid-area: footer;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+}
+
+div.Icon1 {
+    grid-area: Icon1;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center; /*mitten im div*/
+    align-items: center; /* mittlere Zeile*/
+    flex-wrap:wrap;
+    }
+
+div.Icon2 {
+    grid-area:Icon2;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-wrap:wrap;
+    }
+
+div.Icon3 {
+    grid-area:Icon3;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    }
+
+div.Icon4 {
+    grid-area:Icon4;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    }
+
+div.Icon5 {
+    grid-area:Icon5;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    }
+
+div.Icon6 {
+    grid-area:Icon6;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    }
+
+div.Icon7 {
+    grid-area:Icon7;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    }
+
+div.Icon8 {
+    grid-area:Icon8;
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-color: #737471;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    }

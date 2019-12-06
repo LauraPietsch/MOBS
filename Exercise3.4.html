@@ -32,7 +32,7 @@
             <input type="submit" value="Prüfen" class="Eingabevorschlag">
         </div>  
 
-        <div class="resultParas">
+        <div class="resultParameter">
                 <p class="falscheEingabe"></p>
                 
         
@@ -50,8 +50,8 @@
                     setGameOver();
                 }
 
-
                 let Teiler =[] // Array definiert
+                
                 for (let i = Math.floor(number/2);i > 1; i--) { // i-- => i "kleiner machen"
                 // Prüfen ob sich number durch i ganzzahlich teilen lässt
                 //wenn ja ist i ein Teiler -> in Array schreiben
