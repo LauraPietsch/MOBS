@@ -1,0 +1,87 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background:  #ffffff
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    display: grid;
+    grid-template-areas: "header header header" "nav main aside" "footer footer footer";
+    grid-template-columns: auto ;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+    text-align:center;
+    font: Arial;
+    font-size: 20px;
+}
+
+main {
+    grid-area: main;
+    background:  #ffffff;
+    padding: 0px;
+    display:grid;
+    grid-template-areas: "Icon1 Icon2 Icon3" "Icon4 Icon5 Icon6";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto auto ;
+    text-align:center;
+    }     
+
+
+footer {
+    grid-area: footer;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+    text-align: right;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background: #737471;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #737471;
+    display: center; 
+    justify-content: center; /*Inhalt in der Mitte des Buttons */
+    /*align-items: center; /* mittlere Zeile*/
+    flex-wrap:wrap;
+}
+
+#Buttons:target .Buttonklasse{display: none;}
+/*<div id="Buttons" class = "Buttonklasse" href="#Buttons">*/
+
+.Button1 {
+    grid-area: Icon1;
+    }
+
+.Button2 {
+    grid-area: Icon2;
+    }
+
+.Button3 {
+    grid-area: Icon3;
+    }
+
+.Button4 {
+    grid-area: Icon4;
+    }
+
+.Button5 {
+    grid-area: Icon5;
+    }
+    
+.Button6 {
+    grid-area: Icon6;
+    }
+
