@@ -9,47 +9,96 @@
 </head>
 
 <body>
-
+    
     <header>
         <div id="datumzeit"></div>
     </header>
 
-    <template>
 
-    </template>
+    <main>  
+        <!-- BUTTONS MAIN -->
+        <div class = Buttonklasse id="Buttons">
+                 <button type= "submit" id = "music" class="Button_music"> 
+                        <img src = "music_icon.png" height=100 width=100></img>
+                </button>
+            
+                <button type= "submit" id = "speed" class="Button_speed"> 
+                            <img src = "speed.png" height=100 width=100></img>
+                </button>
+                   
+                <button type= "submit" id = "navi" class="Button_navi"> 
+                            <img src = "dashboard_icon.png" height=100 width=100></img>
+                </button>
+            
+                <button type= "submit" id = "fuel" class="Button_fuel"> 
+                            <img src = "fuel_icon.png" height=100 width=100></img>
+                </button>
+            
+                        </div>
+        
+        
+        <!-- TEMPLATES-->
+        <template class="template_fuel">
+                <header>
+                    <button type= "submit" id = "pfeil" class="Pfeilbutton"> 
+                        <img src = "pfeil.png" height=100 width=100></img>
+                    </button>
+                </header>
+                <main>
+                       <div class ="Tankstand"> Tankstand: </div>
+                       <div class ="Kraftstoffverbrauch"> Kraftstoffverbrauch: </div>
+                </main>
+        </template>
 
-    <main>
+        <template class="template_music">
+                <header>
+                <button type= "submit" id = "pfeil_music" class="Pfeilbutton_music"> 
+                    <img src = "pfeil.png" height=100 width=100></img>
+                </button>
+                </header>
+                <main>
+                    <button type= "submit" id = "zurueck" class="Button_zurueck"> 
+                        <img src = "zurueck.png" height=100 width=100></img>
+                    </button>
+                    
+                    <button type= "submit" id = "play" class="Button_play"> 
+                        <img src = "play.png" height=100 width=100></img>
+                    </button>
+                           
+                    <button type= "submit" id = "vor" class="Button_vor"> 
+                        <img src = "vor.png" height=100 width=100></img>
+                    </button>
+                </main>
+        </template>
+
+        <template class="template_speed">
+                <header>
+                <button type= "submit" id = "pfeil" class="Pfeilbutton"> 
+                    <img src = "pfeil.png" height=100 width=100></img>
+                </button>
+                </header>
+                <main>
+                    <div class ="Geschwindigkeit"> Geschwindigkeit: </div>
+                </main>
+        </template>
+
+        <template class="template_navi">
+                <header>
+                <button type= "submit" id = "pfeil" class="Pfeilbutton"> 
+                    <img src = "pfeil.png" height=100 width=100></img>
+                </button>
+                </header>
+                <main>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50103.42109643403!2d9.660748846270184!3d48.700956643028434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1576077519771!5m2!1sde!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </main>
+        </template>
+
+
+
+
 
     
-        <div class = Buttonklasse id="Buttons">
-                    <button type= "submit" value= "B1" class="Button1"> 
-                        <img src = "music_icon.png" height=100 width=100></img>
-                    </button>
-            
-                    <button type= "submit" value= "B2" class="Button2"> 
-                            <img src = "car_doors_icon.png" height=100 width=100></img>
-                    </button>
-                   
-                    <button type= "submit" value= "B3" class="Button3"> 
-                            <img src = "dashboard_icon.png" height=100 width=100></img>
-                    </button>
-            
-                    <button type= "submit" value= "B4" class="Button4"> 
-                            <img src = "fuel_icon.png" height=100 width=100></img>
-                    </button>
-            
-                    <button type= "submit" value= "B5" class="Button5"> 
-                            <img src = "dashboard_icon.png" height=100 width=100></img>
-                    </button>
-            
-                    <button type= "submit" value= "B6" class="Button6"> 
-                            <img src = "fuel_icon.png" height=100 width=100></img>
-                    </button>
-            
-
-        </a>
-        </div>
-    </main> 
+         </main> 
 
     
 

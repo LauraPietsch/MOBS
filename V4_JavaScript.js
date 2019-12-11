@@ -1,47 +1,61 @@
-document.getElementById("Buttons").onclick = function() {   //irgendwas miot addeventlistener geht auch!!
-    document.getElementById("Buttons").style.display = "none";
+// Buttons verstecken und Inhalt darstellen
+
+const pushButton_fuel = document.querySelector(".Button_fuel");
+
+function clearAndshow_fuel (){
+    document.getElementById("Buttons").style.display ="none";
+    var temp_fuel = document.getElementsByClassName("template_fuel")[0];
+    var clon_fuel = temp_fuel.content.cloneNode(true);
+    document.body.appendChild(clon_fuel);    
 }
+pushButton_fuel.addEventListener('click', clearAndshow_fuel);
 
 
-// Button Funnktionen
-const Button1 = document.querySelector(".Button1");
-function push1() {
-    console.log("Huhu");
-   
+const pushButton_music = document.querySelector(".Button_music"); //KEIN getById /byClassName... -> findet es nicht
+
+function clearAndshow_music (){
+    document.getElementById("Buttons").style.display ="none";
+    var temp_music = document.getElementsByClassName("template_music")[0];
+    var clon_music = temp_music.content.cloneNode(true);
+    document.body.appendChild(clon_music);    
 }
-Button1.addEventListener('click', push1);
+pushButton_music.addEventListener('click', clearAndshow_music);
 
-const Button2 = document.querySelector(".Button2");
-function push2() {
-    console.log("Huhu");
-    
+
+const pushButton_speed = document.querySelector(".Button_speed"); 
+
+function clearAndshow_speed (){
+    document.getElementById("Buttons").style.display ="none";
+    var temp_speed = document.getElementsByClassName("template_speed")[0];
+    var clon_speed = temp_speed.content.cloneNode(true);
+    document.body.appendChild(clon_speed);    
 }
-Button2.addEventListener('click', push2);
+pushButton_speed.addEventListener('click', clearAndshow_speed);
 
-const Button3 = document.querySelector(".Button3");
-function push3() {
-    console.log("Huhu");
 
+const pushButton_navi = document.querySelector(".Button_navi"); 
+
+function clearAndshow_navi (){
+    document.getElementById("Buttons").style.display ="none";
+    var temp_navi = document.getElementsByClassName("template_navi")[0];
+    var clon_navi = temp_navi.content.cloneNode(true);
+    document.body.appendChild(clon_navi);    
 }
-Button3.addEventListener('click', push3);
+pushButton_navi.addEventListener('click', clearAndshow_navi);
 
-const Button4 = document.querySelector(".Button4");
-function push4() {
-    console.log("Huhu");
-}
-Button4.addEventListener('click', push4);
 
-const Button5 = document.querySelector(".Button5");
-function push5() {
-    console.log("Huhu");
-}
-Button5.addEventListener('click', push5);
 
-const Button6 = document.querySelector(".Button6");
-function push6() {
-    console.log("Huhu");
-}
-Button6.addEventListener('click', push6);
+
+/*zurückButton
+const zurueckButton = document.querySelector(".Pfeilbutton");
+
+function ButtonZurueck (){
+    document.getElementById ("pfeil").style.display ="none";
+    var home = document.getElementsByClassName("Buttonklasse")[0]; // was soll aufgerufen werden
+    var clon_home = home.content.cloneNode(true);
+    document.body.appendChild(clon_home);    
+} 
+zurueckButton.addEventListener('click', ButtonZurueck);//Aufruf ButtonZurueck klasse bei klick*/
 
 
 //Uhrzeit und Datum
@@ -84,15 +98,3 @@ function DatumZeit() {
       window.setTimeout("DatumZeit();", 1000);
 }
     window.onload = DatumZeit;
-
-
-
-
-
-
-
-
-
-
-
-

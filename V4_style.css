@@ -1,7 +1,7 @@
 body {
     padding: 0px;
     margin: 0px;
-    background:  #ffffff
+    background:  #ffffff;
     font-size: 2em;
     font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
     display: grid;
@@ -21,6 +21,10 @@ header {
     text-align:center;
     font: Arial;
     font-size: 20px;
+    grid-template-areas: "column1" "column2" "column3";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto auto ;
+    text-align:center;
 }
 
 main {
@@ -30,10 +34,53 @@ main {
     display:grid;
     grid-template-areas: "Icon1 Icon2 Icon3" "Icon4 Icon5 Icon6";
     grid-template-columns: auto auto auto ;
-    grid-template-rows: auto auto auto ;
+    grid-template-rows: auto;
+    align-content: center;
     text-align:center;
     }     
 
+    .Tankstand {
+        grid-area: Icon1;
+        margin: 20px;
+        padding: 20px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+        width: auto;
+        height:50%;
+    }
+    
+    .Kraftstoffverbrauch {
+        grid-area: Icon2;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+        width: auto;
+        height: 50%;
+    }
+
+    .Geschwindigkeit {
+        grid-area: Icon2;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
 
 footer {
     grid-area: footer;
@@ -46,8 +93,8 @@ footer {
 }
 
 button {
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
     background: #737471;
     border-style: solid;
     border-radius: 20px;
@@ -55,33 +102,23 @@ button {
     display: center; 
     justify-content: center; /*Inhalt in der Mitte des Buttons */
     /*align-items: center; /* mittlere Zeile*/
-    flex-wrap:wrap;
+    align-content: center;
 }
 
-#Buttons:target .Buttonklasse{display: none;}
-/*<div id="Buttons" class = "Buttonklasse" href="#Buttons">*/
-
-.Button1 {
+.Button_music {
     grid-area: Icon1;
     }
 
-.Button2 {
+.Button_speed {
     grid-area: Icon2;
     }
 
-.Button3 {
+.Button_navi {
     grid-area: Icon3;
     }
 
-.Button4 {
+.Button_fuel {
     grid-area: Icon4;
     }
 
-.Button5 {
-    grid-area: Icon5;
-    }
-    
-.Button6 {
-    grid-area: Icon6;
-    }
 
