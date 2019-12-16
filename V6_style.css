@@ -1,0 +1,181 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background:  #ffffff;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    display: grid;
+    grid-template-areas: "header header header" "nav main aside" "footer footer footer";
+    grid-template-columns: auto ;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+    text-align:center;
+    font: Arial;
+    font-size: 20px;
+    grid-template-areas: "column1" "column2" "column3";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto auto ;
+    text-align:center;
+}
+
+main {
+    grid-area: main;
+    background:  #ffffff;
+    padding: 0px;
+    display:grid;
+    grid-template-areas: "Icon1 Icon2 Icon3 Icon4" "Icon5 Icon6 Icon7 Icon8";
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    align-content: center;
+    text-align:center;
+    }     
+
+    .Tankstand {
+        grid-area: Icon1;
+        margin: 20px;
+        padding: 20px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+        width: auto;
+        height:50%;
+    }
+    
+    .Kraftstoffverbrauch {
+        grid-area: Icon2;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+        width: auto;
+        height: 50%;
+    }
+
+    .Geschwindigkeit {
+        grid-area: Icon2;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+    .Temperatur {
+        grid-area: Icon1;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+    .Druck {
+        grid-area: Icon2;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+    .Feuchtigkeit {
+        grid-area: Icon3;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+
+footer {
+    grid-area: footer;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+    text-align: right;
+}
+
+button {
+    margin: 20px;
+    padding: 20px;
+    background: #737471;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #737471;
+    display: center; 
+    justify-content: center; /*Inhalt in der Mitte des Buttons */
+    /*align-items: center; /* mittlere Zeile*/
+    align-content: center;
+}
+
+.Button_music {
+    grid-area: Icon1;
+    flex-wrap:wrap;
+    }
+
+.Button_speed {
+    grid-area: Icon2;
+    flex-wrap:wrap;
+    }
+.Button_temperatur {
+    grid-area: Icon2;
+    flex-wrap:wrap;
+    } 
+
+.Button_navi {
+    grid-area: Icon3;
+    flex-wrap:wrap;
+    }
+
+.Button_fuel {
+    grid-area: Icon4;
+    flex-wrap:wrap;
+    }
+
+.Button_window {
+        grid-area: Icon5;
+        flex-wrap:wrap;
+        }
+
+.Button_lock {
+    grid-area: Icon6;
+    flex-wrap:wrap;
+            }
+
