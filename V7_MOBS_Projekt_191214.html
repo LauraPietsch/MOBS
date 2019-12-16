@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="V7_style.css">
+    <script src="V7_JavaScript.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="datum"></div>
+        <div id="zeit"></div>
+
+        <div class="Homebutton" id="homebutton">
+            <button type="submit" id="b_home" class="Button_Home">
+            <img src="menu_icon.png" height=50 width=50></img>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="Menue" id="menue">
+            <button type="submit" id="b_musik" class="Button_Musik">
+                <img src="music_icon.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_geschwindigkeit" class="Button_Geschwindigkeit">
+                <img src="speed.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_temperatur" class="Button_Temperatur">
+                <img src="temperatur_icon.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_navi" class="Button_Navi">
+                <img src="dashboard_icon.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_tanken" class="Button_Tanken">
+                <img src="icon_fu.jpg" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_fenster" class="Button_Fenster">
+                <img src="window_icon.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_schloss" class="Button_Schloss">
+                <img src="lock_icon.png" height=100 width=100></img>
+            </button>
+        </div>
+
+        <!-- Untermenüs -->
+        <div class="Musik" id="musik">
+            <button type="submit" id="zurueck" class="Button_zurueck">
+                <img src="zurueck.png" height=100 width=100></img>
+            </button>
+            <button type="submit" id="play" class="Button_play">
+                <img src="play.png" height=100 width=100></img>
+            </button>
+            <button type="submit" id="vor" class="Button_vor">
+                <img src="vor.png" height=100 width=100></img>
+            </button>
+        </div> 
+
+        <div class ="Geschwindigkeit" id="geschwindigkeit">
+            <div class = "Daten_Geschwindigkeit">Geschwindigkeit: </div>
+        </div>
+
+        <div class ="Temperatur" id="temperatur">
+                <div class = "Daten">Temperatur: </div>
+                <div class = "Daten">Feuchtigkeit: </div>
+                <div class = "Daten">Druck: </div>
+            </div>
+        
+        <div class="Navi" id="navi">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50103.42109643403!2d9.660748846270184!3d48.700956643028434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1576077519771!5m2!1sde!2sde"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+            </iframe>
+        </div>    
+
+        <div class = "Kraftstoff" id="kraftstoff">
+            <div class="Daten"> Tankstand: </div>
+            <div class="Daten"> Kraftstoffverbrauch: </div>
+        </div> 
+        
+        <div class="Fenster" id="fenster">
+            <button type="submit" id="hoch" class="Button_hoch">
+                <img src="pfeilhoch_icon.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="runter" class="Button_runter">
+                <img src="pfeilrunter_icon.png" height=100 width=100></img>
+            </button>
+        </div>
+
+        <div class="Schliessen" id="schliessen">
+            <button type="submit" id="zu" class="Button_zu">
+                <img src="zu_icon.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="auf" class="Button_auf">
+                <img src="auf_icon.png" height=100 width=100></img>
+            </button>
+        </div>
+    
+    </main>
+
+    <footer>
+        <div Class = "Autor" id="autor">© LauraPietsch</div>
+    </footer>
+</body>
+
+</html>
