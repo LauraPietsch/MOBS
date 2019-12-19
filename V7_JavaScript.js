@@ -23,6 +23,24 @@ document.getElementById("menue").style.display="block";
 }
 zurueckButton_Musik.addEventListener('click', zurueck_Musik);
 
+
+fetch("http://192.168.0.69:5000/music")
+.then(response => response.json())
+.then(function(Playlist) {
+    console.log("Playlist", Playlist);
+
+document.getElementsByClassName("Daten_Musik")[0].append(Playlist[0].artist, " ", Playlist[0].artist);
+document.getElementsByClassName("Daten_Musik")[0].append(Playlist[1].artist, " ", Playlist[1].artist);
+document.getElementsByClassName("Daten_Musik")[0].append(Playlist[2].artist, " ", Playlist[2].artist)
+
+});
+
+
+function createPlaylist() {
+    var newElement = document.createElement("li");
+    newElement.setAttribute
+}
+
 //Geschwindigkeit-Seite
 const pushButton_Geschwindigkeit= document.querySelector(".Button_Geschwindigkeit");
 function clearAndshow_Geschwindigkeit() {
@@ -97,6 +115,21 @@ document.getElementById("fenster").style.display = "none";
 document.getElementById("menue").style.display="block";
 }
 zurueckButton_Fenster.addEventListener('click', zurueck_Fenster);
+
+const pushButton_runter = document.querySelector(".Button_runter");
+function open_window() {
+    fetch('http://192.168.0.69:5000/action/down')
+        .then(console.log("done open"));
+}
+pushButton_runter.addEventListener('click', open_window);
+
+
+const pushButton_hoch = document.querySelector(".Button_hoch");
+function close_window() {
+    fetch('http://192.168.0.69:5000/action/up')
+        .then(console.log("done close"));
+}
+pushButton_hoch.addEventListener('click', close_window);
     
 //Schliessen-Seite
 const pushButton_Schliessen = document.querySelector(".Button_Schloss");
@@ -113,30 +146,8 @@ document.getElementById("menue").style.display="block";
 }
 zurueckButton_Schliessen.addEventListener('click', zurueck_Schliessen);
 
-
-//Pi Anbindung
-"use strict";
-
-fetch("http://192.168.0.69:5000/status").then(function (response) {
-    response.text().then(function (text) {
-        console.log(text);
-
-        var daten = text.split(",");
-        var Ver = daten[0].split(":");
-        var Feucht = daten[1].substr(15, 6);
-        var Dru = daten[2].substr(15, 6);
-        var Gesch = daten[3].split(":");
-        var Temp = daten[4].substr(12, 4);
-
-        document.getElementsByClassName("Daten")[0].append(Gesch[1] + " km/h");
-        document.getElementsByClassName("Daten")[1].append(Ver[1] + " l");
-        document.getElementsByClassName("Daten")[2].append(Dru + " Pa");
-        document.getElementsByClassName("Daten")[3].append(Temp + " °C");
-        document.getElementsByClassName("Daten")[4].append(Feucht[1] + " g/m³");
-    });
-});
-
-/*const pushButton_open = document.querySelector(".Button_auf");
+//Schliessen Seite - Funktion Buttons
+const pushButton_open = document.querySelector(".Button_auf");
 
 function open_car() {
     fetch('http://192.168.0.69:5000/action/unlock')
@@ -151,13 +162,40 @@ function close_car() {
     fetch('http://192.168.0.69:5000/action/lock')
         .then(console.log("done lock"));
 }
-pushButton_close.addEventListener('click', close_car);*/
+pushButton_close.addEventListener('click', close_car);
+
+
+//Daten von Pi
+"use strict";
+
+fetch("http://192.168.0.69:5000/status").then(function (response) {
+    response.text().then(function (text) {
+        console.log(text);
+
+        var daten = text.split(",");
+        var Verbrauch = daten[0].split(":");
+        var Feuchtigkeit = daten[1].substr(15, 6);
+        var Druck = daten[2].substr(15, 6);
+        var Geschwindigkeit = daten[3].split(":");
+        var Temperatur = daten[4].substr(12, 4);
+
+        document.getElementsByClassName("Daten_Geschwindigkeit")[0].append(Geschwindigkeit[1] + " km/h");
+        document.getElementsByClassName("Daten_Temperatur")[0].append(Temperatur + " °C");
+        document.getElementsByClassName("Daten_Feuchtigkeit")[0].append(Feuchtigkeit + " g/m³");
+        document.getElementsByClassName("Daten_Druck")[0].append(Druck + " Pa");
+        document.getElementsByClassName("Daten_Verbrauch")[0].append(Verbrauch[1] + " l/km");
+    });
+});
+
+
+
 
 //Uhrzeit und Datum
 function Zeit(){
 var Stunden, Minuten;
 var StundenZahl, MinutenZahl;
 var HeuteZeit;
+var Anzeige;
     
 HeuteZeit = new Date();
 StundenZahl = HeuteZeit.getHours();
@@ -175,14 +213,11 @@ MinutenZahl = HeuteZeit.getMinutes();
     else {
         Minuten = MinutenZahl;
     }
-    HeuteZeit = Stunden + ":" + Minuten;
-    return HeuteZeit;
-    }
-
-var ZeitAusgabe = Zeit();
-document.getElementById("zeit").textContent += ZeitAusgabe;
-   
-
+    Anzeige = Stunden + ":" + Minuten;
+    zeit.innerHTML = Anzeige;
+    window.setTimeout("Zeit();", 1000);
+}
+window.onload = Zeit;
    
 function Datum() {
     var Tag, Monat, Jahr;

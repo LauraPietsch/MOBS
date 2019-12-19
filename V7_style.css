@@ -7,7 +7,7 @@ body {
     display: grid;
     grid-template-areas: "header" "main" "footer";
     grid-template-columns: auto;
-    grid-template-rows: 1fr auto 2fr;
+    grid-template-rows: 10% auto 10%;
     height: 100vh;
 }
 
@@ -123,22 +123,9 @@ main {
         padding: 20px;
         flex-wrap:wrap;
                 }
-    .Tankstand {
-        grid-area: Icon1;
-        margin: 20px;
-        padding: 20px;
-        background: #737471;
-        border-style: solid;
-        border-radius: 20px;
-        border-color: #737471;
-        display: center; 
-        justify-content: center; /*Inhalt in der Mitte des Buttons */
-        flex-wrap:wrap;
-        width: auto;
-        height:50%;
-    }
-    
-    .Kraftstoffverbrauch {
+
+        
+    Div.Daten_Verbrauch {
         grid-area: Icon2;
         margin: 10px;
         padding: 10px;
@@ -153,7 +140,7 @@ main {
         height: 50%;
     }
 
-    .Geschwindigkeit {
+    Div.Daten_Geschwindigkeit {
         grid-area: Icon2;
         margin: 10px;
         padding: 10px;
@@ -166,7 +153,7 @@ main {
         flex-wrap:wrap;
     }
 
-    .Temperatur {
+    Div.Daten_Temperatur {
         grid-area: Icon1;
         margin: 10px;
         padding: 10px;
@@ -179,7 +166,7 @@ main {
         flex-wrap:wrap;
     }
 
-    .Druck {
+    Div.Daten_Druck {
         grid-area: Icon2;
         margin: 10px;
         padding: 10px;
@@ -192,7 +179,7 @@ main {
         flex-wrap:wrap;
     }
 
-    .Feuchtigkeit {
+    Div.Daten_Feuchtigkeit {
         grid-area: Icon3;
         margin: 10px;
         padding: 10px;
@@ -205,6 +192,18 @@ main {
         flex-wrap:wrap;
     }
 
+    Div.Daten_Musik {
+        grid-area: Icon3;
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
 
 
 footer {
