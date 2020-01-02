@@ -1,0 +1,213 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background:  #ffffff;
+    font-size: 12pt;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: 15% auto 10%;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #737471;
+    padding: 5px;
+    font: Arial;
+    font-size: 20pt;
+    display:grid; 
+    grid-template-areas: "header1 header2 header3";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto;
+    align-content: center;
+}
+    #b_home { /* bei Verwendung von ID #; bei class Div"."Classname */
+        grid-area:header1;
+        padding: 10px;
+    }
+
+    #zeit {
+        grid-area:header2;
+        padding:20px;
+        font-size: 28pt;
+        text-align:center;
+    }
+
+    #datum {
+        grid-area:header3;
+        padding:20px;
+        text-align:right;
+    }
+    
+main {
+    grid-area: main;
+    background:  #ffffff;
+    font-size: 14pt;
+    display:grid;
+    align-content: center; /* vertikale Zentrierung */    
+    justify-items:center; /* horizintale Zentrierung */
+}     
+
+    button {
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+    }
+    
+    #b_musik {
+        margin: 20px;
+        padding: 20px;
+        flex-wrap:wrap;
+        }
+    
+    #b_geschwindigkeit {     
+        margin: 20px;
+        padding: 20px;
+        flex-wrap:wrap;
+        }
+    #b_temperatur {
+        margin: 20px;
+        padding: 20px;
+        flex-wrap:wrap;
+        } 
+    
+    #b_navi {
+        margin: 20px;
+        padding: 20px;
+        flex-wrap:wrap;
+        }
+    
+    #b_tanken {
+        margin: 20px;
+        padding: 20px;
+        flex-wrap:wrap;
+        }
+    
+    #b_fenster {
+        margin: 20px;
+        padding: 20px;
+        flex-wrap:wrap;
+        }
+    
+    #b_schloss {
+        margin: 20px;
+        padding: 20px;
+        flex-wrap:wrap;
+                }
+
+
+    Div.Musik {
+    }            
+        
+    Div.Daten_Verbrauch {
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+        width: auto;
+        height: 50%;
+    }
+    Div.Geschwindigkeit {
+        background-image: url("bild_geschwindigkeit.jpg");
+        background-size: 100% 100%;
+    }
+    Div.Daten_Geschwindigkeit {
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+    Div.Daten_Temperatur {
+        margin: 10px;
+        padding: 20px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+    Div.Daten_Druck {
+        margin: 10px;
+        padding: 20px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+    Div.Daten_Feuchtigkeit {
+        margin: 10px;
+        padding: 20px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+    Div.Daten_Musik {
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+    
+    Div.Daten_Navi {
+        margin: 10px;
+        padding: 10px;
+        background: #737471;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: #737471;
+        display: center; 
+        justify-content: center; /*Inhalt in der Mitte des Buttons */
+        flex-wrap:wrap;
+    }
+
+
+footer {
+    grid-area: footer;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+    text-align: right;
+    display:grid; 
+    grid-template-areas: "footer1 footer2 footer3";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+#autor {
+    grid-area:footer3;
+    text-align:right;
+}

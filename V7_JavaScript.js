@@ -24,22 +24,33 @@ document.getElementById("menue").style.display="block";
 zurueckButton_Musik.addEventListener('click', zurueck_Musik);
 
 
-fetch("http://192.168.0.69:5000/music")
+/*fetch("http://192.168.0.69:5000/music")*/
+fetch("http://192.168.178.43:5000/music")
 .then(response => response.json())
 .then(function(Playlist) {
     console.log("Playlist", Playlist);
 
-document.getElementsByClassName("Daten_Musik")[0].append(Playlist[0].artist, " ", Playlist[0].artist);
-document.getElementsByClassName("Daten_Musik")[0].append(Playlist[1].artist, " ", Playlist[1].artist);
-document.getElementsByClassName("Daten_Musik")[0].append(Playlist[2].artist, " ", Playlist[2].artist)
+document.getElementsByClassName("Daten_Musik")[0].append(Playlist[0].artist, " - ", Playlist[0].title);
+document.getElementsByClassName("Daten_Musik")[1].append(Playlist[1].artist, " - ", Playlist[1].title);
+document.getElementsByClassName("Daten_Musik")[2].append(Playlist[2].artist, " - ", Playlist[2].title)
 
 });
 
+var song = document.getElementById("audio");
+const pushButton_play = document.querySelector(".Button_play");
+function audio_play() {
+    song.play()
+};
+pushButton_play.addEventListener('click', audio_play);
 
-function createPlaylist() {
-    var newElement = document.createElement("li");
-    newElement.setAttribute
-}
+const pushButton_pause = document.querySelector(".Button_pause");
+function audio_pause() {
+    song.pause()
+};
+pushButton_pause.addEventListener('click', audio_pause);
+
+
+
 
 //Geschwindigkeit-Seite
 const pushButton_Geschwindigkeit= document.querySelector(".Button_Geschwindigkeit");
@@ -118,7 +129,8 @@ zurueckButton_Fenster.addEventListener('click', zurueck_Fenster);
 
 const pushButton_runter = document.querySelector(".Button_runter");
 function open_window() {
-    fetch('http://192.168.0.69:5000/action/down')
+    /*fetch('http://192.168.0.69:5000/window/down')*/
+    fetch('http://192.168.178.43:5000/window/down')
         .then(console.log("done open"));
 }
 pushButton_runter.addEventListener('click', open_window);
@@ -126,7 +138,8 @@ pushButton_runter.addEventListener('click', open_window);
 
 const pushButton_hoch = document.querySelector(".Button_hoch");
 function close_window() {
-    fetch('http://192.168.0.69:5000/action/up')
+    /*fetch('http://192.168.0.69:5000/window/up')*/
+    fetch('http://192.168.178.43:5000/window/up')
         .then(console.log("done close"));
 }
 pushButton_hoch.addEventListener('click', close_window);
@@ -150,7 +163,7 @@ zurueckButton_Schliessen.addEventListener('click', zurueck_Schliessen);
 const pushButton_open = document.querySelector(".Button_auf");
 
 function open_car() {
-    fetch('http://192.168.0.69:5000/action/unlock')
+    fetch('http://192.168.178.43:5000/action/unlock')
         .then(console.log("done unlock"));
 }
 pushButton_open.addEventListener('click', open_car);
@@ -159,7 +172,7 @@ pushButton_open.addEventListener('click', open_car);
 const pushButton_close = document.querySelector(".Button_zu");
 
 function close_car() {
-    fetch('http://192.168.0.69:5000/action/lock')
+    fetch('http://192.168.178.43:5000/action/lock')
         .then(console.log("done lock"));
 }
 pushButton_close.addEventListener('click', close_car);
@@ -168,7 +181,7 @@ pushButton_close.addEventListener('click', close_car);
 //Daten von Pi
 "use strict";
 
-fetch("http://192.168.0.69:5000/status").then(function (response) {
+fetch("http://192.168.178.43:5000/status").then(function (response) {
     response.text().then(function (text) {
         console.log(text);
 

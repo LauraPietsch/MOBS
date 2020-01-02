@@ -1,0 +1,83 @@
+header {
+    grid-area: header;
+    background: #737471;
+    padding: 5px;
+    font: Arial;
+    display:grid; 
+    grid-template-areas: "header1 header2 header3";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto;
+    align-content: center;
+    align-items:center;
+}
+    #b_home { /* bei Verwendung von ID #; bei class Div"."Classname */
+        grid-area:header1;
+        align-content: center;
+    }
+
+    #zeit {
+        grid-area:header2;
+        padding:20px;
+        text-align:center;
+        font-size: 3vw;
+    }
+
+    #datum {
+        grid-area:header3;
+        padding:20px;
+        text-align:right;
+        font-size:2vw;
+    }
+
+body {
+    background:  #ffffff;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: 15% auto 10%;
+    height: 100vh;
+    width:100vw;
+}
+    
+main {
+    grid-area: main;
+    background-image: url("Bilder/background_strasse.jpg");
+    background-size: cover;
+    display:grid;
+    align-content: center;
+    justify-content:center;
+    font-size: 3vw;
+}     
+
+button {
+    background: #737471;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #737471;
+    margin: 20px;
+    padding: 20px;
+    flex-wrap:wrap;
+}
+
+
+footer {
+    grid-area: footer;
+    background: #737471;
+    padding: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #737471;
+    text-align: right;
+    display:grid; 
+    grid-template-areas: "footer1 footer2 footer3";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+#autor {
+    grid-area:footer3;
+    text-align:right;
+}
