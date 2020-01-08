@@ -114,7 +114,7 @@ document.getElementById("menue").style.display="block";
 zurueckButton_Tanken.addEventListener('click', zurueck_Tanken);
 
 
-//Fenster-Seite
+//Fenster-Seite - "Coupe-Version nur Fenster vorne vorhanden"
 const pushButton_Fenster = document.querySelector(".Button_Fenster");
 function clearAndshow_Fenster() {
 document.getElementById("menue").style.display = "none";
@@ -129,23 +129,39 @@ document.getElementById("menue").style.display="block";
 }
 zurueckButton_Fenster.addEventListener('click', zurueck_Fenster);
 
-const pushButton_runter = document.querySelector(".Button_runter");
-function open_window() {
+const pushButton_runter_rechts = document.querySelector(".Button_runter_rechts");
+function open_window_rechts() {
     /*fetch('http://192.168.0.69:5000/window/down')*/
     fetch('http://192.168.178.43:5000/window/down')
         .then(console.log("done open"));
 }
-pushButton_runter.addEventListener('click', open_window);
+pushButton_runter_rechts.addEventListener('click', open_window_rechts);
 
 
-const pushButton_hoch = document.querySelector(".Button_hoch");
-function close_window() {
+const pushButton_hoch_rechts = document.querySelector(".Button_hoch_rechts");
+function close_window_rechts() {
     /*fetch('http://192.168.0.69:5000/window/up')*/
     fetch('http://192.168.178.43:5000/window/up')
         .then(console.log("done close"));
 }
-pushButton_hoch.addEventListener('click', close_window);
-    
+pushButton_hoch_rechts.addEventListener('click', close_window_rechts);
+
+const pushButton_runter_links = document.querySelector(".Button_runter_links");
+function open_window_links() {
+    /*fetch('http://192.168.0.69:5000/window/down')*/
+    fetch('http://192.168.178.43:5000/window/down')
+        .then(console.log("done open"));
+}
+pushButton_runter_links.addEventListener('click', open_window_links);
+
+
+const pushButton_hoch_links = document.querySelector(".Button_hoch_links");
+function close_window_links() {
+    /*fetch('http://192.168.0.69:5000/window/up')*/
+    fetch('http://192.168.178.43:5000/window/up')
+        .then(console.log("done close"));
+}
+pushButton_hoch_links.addEventListener('click', close_window_links);
 
 //Schliessen-Seite
 const pushButton_Schliessen = document.querySelector(".Button_Schloss");

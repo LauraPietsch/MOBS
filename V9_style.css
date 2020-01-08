@@ -61,6 +61,15 @@ button {
     flex-wrap:wrap;
 }
 
+div.Fenster {
+    display: grid;
+    grid-template-areas: "vorne links vorne rechts"
+                         "hinten links hinten rechts";
+    grid-template-columns: auto;
+    grid-template-rows: 15% auto 10%;
+}
+
+
 
 footer {
     grid-area: footer;
