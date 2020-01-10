@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Car Entertainment System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JavaScript.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="datum"></div>
+        <div id="zeit"></div>
+
+        <div class="Homebutton" id="homebutton">
+            <button type="submit" id="b_home" class="Button_Home">
+            <img src="Bilder/icon_home.png" height=50 width=50></img>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+    
+        <div class="Menue" id="menue">
+            <button type="submit" id="b_musik" class="Button_Musik">
+                <img src="Bilder/icon_musik.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_geschwindigkeit" class="Button_Geschwindigkeit">
+                <img src="Bilder/icon_geschwindigkeit.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_temperatur" class="Button_Temperatur">
+                <img src="Bilder/icon_temperatur.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_navi" class="Button_Navi">
+                <img src="Bilder/icon_navi.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_tanken" class="Button_Tanken">
+                <img src="Bilder/icon_kraftstoff.jpg" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_fenster" class="Button_Fenster">
+                <img src="Bilder/icon_fenster.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="b_schloss" class="Button_Schloss">
+                <img src="Bilder/icon_schloss.png" height=100 width=100></img>
+            </button>
+        </div>
+
+        <!-- Untermenüs -->
+        <div class="Musik" id="musik">         
+            <div class = "Daten_Musik">  </div>
+            <div class = "Daten_Musik">  </div>
+            <div class = "Daten_Musik">  </div>
+
+            <button type="submit" id="play" class="Button_play">
+                    <img src="Bilder/icon_play.png" height=50 width=50></img>
+            </button>
+
+            <button type="submit" id="pause" class="Button_pause">
+                    <img src="Bilder/icon_pause.png" height=50 width=50></img>
+            </button>
+
+            <audio id="audio" src="Musik/shout_tears for fears.mp3" type="mp3">  
+            </audio>
+        </div> 
+
+        <div class ="Geschwindigkeit" id="geschwindigkeit">
+        </div>
+
+        <div class ="Aussendaten" id="aussendaten">    
+                <div class = "Daten_Temperatur"></div>
+                <div class = "Daten_Feuchtigkeit"></div>
+                <div class = "Daten_Druck"></div>  
+        </div>
+        
+        <div class="Navi" id="navi">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50103.42109643403!2d9.660748846270184!3d48.700956643028434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1576077519771!5m2!1sde!2sde"
+                width="600" height="450" allowfullscreen="">
+            </iframe>
+        </div>    
+
+        <div class = "Kraftstoff" id="kraftstoff">
+        </div> 
+        
+        <div class="Fenster" id="fenster">
+            <button type="submit" id="hoch_rechts" class="Button_hoch_rechts">  
+                <img src="Bilder/icon_pfeilhoch.png" height=100 width=100></img>
+                rechts
+            </button>
+            <button type="submit" id="hoch_links" class="Button_hoch_links">
+                <img src="Bilder/icon_pfeilhoch.png" height=100 width=100></img>
+                 links
+            </button>
+
+            <button type="submit" id="runter_rechts" class="Button_runter_rechts">
+                <img src="Bilder/icon_pfeilrunter.png" height=100 width=100></img>
+                 rechts
+            </button>          
+            <button type="submit" id="runter_links" class="Button_runter_links">
+                <img src="Bilder/icon_pfeilrunter.png" height=100 width=100></img>
+                 links
+            </button>
+        </div>
+
+        <div class="Schliessen" id="schliessen">
+            <button type="submit" id="zu" class="Button_zu">
+                <img src="Bilder/icon_zu.png" height=100 width=100></img>
+            </button>
+
+            <button type="submit" id="auf" class="Button_auf">
+                <img src="Bilder/icon_auf.png" height=100 width=100></img>
+            </button>
+        </div>
+    
+    </main>
+
+    <footer>
+        <div Class = "Autor" id="autor">© LauraPietsch</div>
+    </footer>
+</body>
+
+</html>
