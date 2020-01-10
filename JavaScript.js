@@ -158,6 +158,7 @@ function close_window_links() {
 }
 pushButton_hoch_links.addEventListener('click', close_window_links);
 
+
 //Schliessen-Seite
 const pushButton_Schliessen = document.querySelector(".Button_Schloss");
 function clearAndshow_Schliessen() {
@@ -229,7 +230,6 @@ fetch("http://192.168.0.69:5000/status").then(function (response) {
     });
 });
 }
-
 
 
 //Uhrzeit und Datum

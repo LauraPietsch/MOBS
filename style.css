@@ -10,7 +10,7 @@ header {
     align-content: center;
     align-items:center;
 }
-    #b_home { /* bei Verwendung von ID #; bei class Div"."Classname */
+    #b_home { 
         grid-area:header1;
         align-content: center;
     }
